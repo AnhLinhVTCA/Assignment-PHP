@@ -23,11 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pwErr = "Password is not empty!";
         $re_pwErr = "Re-Password is not empty!";
     } else {
-        $pw = test_input($_POST["pw"]);
-        $re_pw = test_input($_POST["re-pw"]);
         if (strlen($_POST["pw"]) < 6 || strlen($_POST["re-pw"]) < 6) {
             $pwErr = "Password must be greater than 6 characters !";
             $re_pwErr = " Re-Password must be greater than 6 characters !";
+        } elseif ($_POST["pw"] !== $_POST["re-pw"]) {
+            $re_pwErr = "Re-Password invalid";
+        } else {
+            $pw = test_input($_POST["pw"]);
+            $re_pw = test_input($_POST["re-pw"]);
         }
     }
 }

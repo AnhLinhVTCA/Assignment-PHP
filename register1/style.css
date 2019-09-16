@@ -17,7 +17,7 @@ body{
 }
 
 .form{
-  margin: 20px 20px;
+    margin: 20px 20px 0px 20px;
 }
 
 a{
@@ -49,4 +49,9 @@ input:nth-child(2) {
     border-color: #007bff;
     border: 1px solid transparent;
     border-radius: 5px;
+}
+
+#errPass{
+    color: red;
+    display: none;
 }

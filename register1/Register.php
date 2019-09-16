@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="../JavaScrips.js"></script>
     <title>Register</title>
 </head>
 <?php
@@ -30,11 +31,12 @@ include("Check-Input.php");
             <input type="email" name="email">
             <span class="error"><?php echo $emailErr; ?></span><br>
             <label for="">Password</label><br>
-            <input type="password" name="pw">
+            <input type="password" name="pw" id="pass">
             <span class="error"><?php echo $pwErr; ?></span><br>
             <label for="">Re-Password</label><br>
-            <input type="password" name="re-pw">
+            <input type="password" name="re-pw" id="pass2" onkeyup="ConfirmPW()">
             <span class="error"><?php echo $re_pwErr; ?></span><br>
+            <span id="errPass">Invalid Password</span><br>
         </div>
         <input type="submit" name="register" value="Register">
         <a href="../Login/Login.php">You had account</a>

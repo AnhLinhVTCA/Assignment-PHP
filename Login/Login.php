@@ -56,7 +56,7 @@ function test_input($data)
             <span class="error"><?php echo $pwErr; ?></span><br>
         </div>
         <input type="submit" name="Login" value="Login">
-        <a href="../Register/Register.php">Create an account</a>
+        <a href="../Register1/Register.php">Create an account</a>
         <span class="error"><?php echo $hihiErr; ?></span><br>
     </form>
 </body>
