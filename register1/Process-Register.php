@@ -4,7 +4,7 @@ require("../mysqli_connect.php");
 if (isset($_POST["register"])) {
     $select = "select * from users";
     $result = mysqli_query($conn, $select);
-    if ($fnameErr !== "" || $lnameErr !== "" || $emailErr !== "" || $pwErr !== "" || $re_pwErr !== "") {
+    if ($fnameErr !== "" || $lnameErr !== "" || $emailErr !== "" || $pwErr !== "" || $re_pwErr !== "" || strlen($_POST["pw"]) < 6) {
         # code...
     } elseif ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
