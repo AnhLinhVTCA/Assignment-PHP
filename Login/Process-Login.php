@@ -1,19 +1,23 @@
 <?php
+session_start();
 require("../mysqli_connect.php");
+if (isset($_SESSION["email"])) {
+    session_unset();
+    session_destroy();
+}
 if (isset($_POST["Login"])) {
-    $select = "select * from users";
+    $select = "select * from LinhNA_Users";
     $result = mysqli_query($conn, $select);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            if ($emailErr !==  "" || $pwErr != "") {
-                // code...
-            } elseif ($row["email"] === $_POST["email"] && password_verify($_POST["pw"], $row["password"])) {
-                session_start();
+            if ($row["email"] === $_POST["email"] && password_verify($_POST["pw"], $row["password"])) {
                 $_SESSION["email"] = $row["email"];
+                $_SESSION["first_name"] = $row["first_name"];
+                $_SESSION["last_name"] = $row["last_name"];
                 if ($row["user_level"] == 1) {
-                    header("Location: ../Admin/Admin.php");
+                    header("Location:../Admin/Manager/Admin.php");
                 } else {
-                    header("Location: ../Users/Users.php");
+                    header("Location:../Index.php");
                 }
             } else {
                 $hihiErr = "The email or password that you've entered is incorrect.";

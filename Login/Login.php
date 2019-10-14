@@ -1,3 +1,8 @@
+<?php
+$emailErr = $pwErr = $hihiErr = $email = $pw = "";
+include('Process-Login.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +13,30 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
+
+<body>
+    <div class="title">
+        <h1>Login</h1>
+    </div>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <div class="form">
+            <label for="">Email</label><br>
+            <input type="email" name="email">
+            <span class="error"><?php echo $emailErr; ?></span><br>
+            <label for="">Password</label><br>
+            <input type="password" name="pw">
+            <span class="error"><?php echo $pwErr; ?></span><br>
+        </div>
+        <input type="submit" name="Login" value="Login" id="button-login">
+        <a href="../Register/Register.php">Create an account</a>
+        <span class="error"><?php echo $hihiErr; ?></span><br>
+        <a href="../Index.php" id="return">Return</a>
+    </form>
+</body>
+
+</html>
+
 <?php
-$emailErr = $pwErr = $hihiErr = "";
-$email = $pw = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
@@ -39,26 +65,3 @@ function test_input($data)
     return $data;
 }
 ?>
-
-<?php include('Process-Login.php') ?>
-
-<body>
-    <div class="title">
-        <h1>Login</h1>
-    </div>
-    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <div class="form">
-            <label for="">Email</label><br>
-            <input type="email" name="email">
-            <span class="error"><?php echo $emailErr; ?></span><br>
-            <label for="">Password</label><br>
-            <input type="password" name="pw">
-            <span class="error"><?php echo $pwErr; ?></span><br>
-        </div>
-        <input type="submit" name="Login" value="Login">
-        <a href="../Register1/Register.php">Create an account</a>
-        <span class="error"><?php echo $hihiErr; ?></span><br>
-    </form>
-</body>
-
-</html>

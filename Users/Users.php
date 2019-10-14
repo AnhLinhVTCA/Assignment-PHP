@@ -1,3 +1,5 @@
+<?php include("../Logout/Process-Logout.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <title>Home-Page</title>
 </head>
-<?php include("../Logout/Process-Logout.php") ?>
 
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <h1>Hello <?php echo $_SESSION["email"] ?></h1>
-        <input type="submit" name="Logout" value="Logout">
+        <input type="submit" name="Logout" value="Logout" style="cursor: pointer">
     </form>
 </body>
 

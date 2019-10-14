@@ -4,8 +4,8 @@ if ($_SESSION["email"] !== null) {
     if (isset($_POST["Logout"])) {
         session_unset();
         session_destroy();
-        header("Location: ../Login/Login.php");
+        header("Location:../Index.php");
     }
 } else {
-    header("Location: ../Login/Login.php");
+    header("Location:../Index.php");
 }

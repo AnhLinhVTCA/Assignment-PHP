@@ -1,3 +1,9 @@
+<?php
+$fnameErr1 = $lnameErr1 = $emailErr1 = "";
+include("Process-Edit.php");
+include("Check-Input.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +11,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../Register/style.css">
-    <script src="../../JavaScrips.js"></script>
-    <title>Edit-Profile</title>
+    <link rel="stylesheet" href="../../../Register/style.css">
+    <script src="../../../JavaScrips.js"></script>
+    <title>Update-Profile</title>
 </head>
-<?php
-$fnameErr1 = $lnameErr1 = $emailErr1 = $hihiErr1 = "";
-include("Process-Edit.php");
-include("Check-Input.php");
-?>
 
 <body>
     <div class="title">
-        <h1>Edit - Profile</h1>
+        <h1>Update - Profile</h1>
     </div>
-    <form method="POST" action="">
+    <form method="POST" action="Edit-Profile.php?id=<?php echo $_GET["id"] ?>">
         <div class="form">
             <label for="">Firstname</label><br>
             <input type="text" name="fname" value="<?php echo $fname ?>">
@@ -31,8 +32,8 @@ include("Check-Input.php");
             <input type="email" name="email" value="<?php echo $email ?>">
             <span class="error"><?php echo $emailErr1; ?></span><br>
         </div>
-        <input type="submit" name="update" value="Update" onclick="return checkupdate()">
-        <a href="../Admin.php" name="return">Return</a>
+        <input type="submit" name="update" value="Update" onclick="return checkupdate()" style="cursor: pointer">
+        <a href="../../Manager/Admin.php" name="return">Return</a>
     </form>
 </body>
 

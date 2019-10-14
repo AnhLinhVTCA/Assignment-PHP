@@ -3,7 +3,9 @@
 }
 body{
     border: 3px solid #f1f1f1;
-    margin: 20px 400px;
+    width: 30rem;
+    margin: auto;
+    margin-top: 5rem;
 }
 
 .title{
@@ -21,7 +23,6 @@ body{
 
 a{
     display: block;
-    margin-top: 20px;
     text-align: center;
 }
 .form input{
@@ -38,14 +39,19 @@ label {
     font-weight: bold;
 }
 
-input:nth-child(2) {
-    display: block !important;
-    margin: 10px 0px !important;
-    padding: 10px 20px !important;
-    color: #fff !important;
-    background-color: #007bff !important;
-    border-color: #007bff !important;
-    border: 1px solid transparent !important;
-    border-radius: 5px !important;
-    margin: auto !important;
+#button-login {
+    display: block;
+    margin-bottom: 20px !important;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#return{
+    margin-bottom: 20px;
 }

@@ -1,9 +1,15 @@
 <?php
 require("../../mysqli_connect.php");
 $id = $_GET["id"];
-$sql = "delete from users where id = " . $id;
+$productid = $_GET["productid"];
+if ($id !== null) {
+    $sql = "delete from LinhNA_Users where id = " . $id;
+}
+if ($productid !== null) {
+    $sql = "delete from LinhNA_Products where product_id = " . $productid;
+}
 if (mysqli_query($conn, $sql) === true) {
-    header("Location: ../Admin.php");
+    header("Location:../Manager/Admin.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
