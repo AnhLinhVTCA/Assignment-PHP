@@ -21,12 +21,13 @@ if (isset($_POST["upload"])) {
         echo "Sorry, your file was not uploaded.</br>";
     } else {
         $query = "insert into LinhNA_Products(product_name, product_image, price, product_discount) value ('" . $_POST["productname"] . "','" . $upload . "','" . $_POST["price"] . "','" . $_POST["discount"] . "');";
-        echo $query;
         if (mysqli_query($conn, $query) === true) {
             if (!file_exists($upload_file)) {
                 move_uploaded_file($_FILES["FileToImage"]["tmp_name"], $upload_file);
+                header("Location:../Manager/Admin.php");
+            } else {
+                header("Location:../Manager/Admin.php");
             }
-            header("Location:../Manager/Admin.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

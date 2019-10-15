@@ -14,6 +14,7 @@ include("Check-Input.php");
     <link rel="stylesheet" href="../../../Register/style.css">
     <script src="../../../JavaScrips.js"></script>
     <title>Update-Product</title>
+    <link rel="icon" sizes="192x192" href="../../../Image/178f6b924bbee8befb5cf61c9a17a12e.png">
 </head>
 
 <body>

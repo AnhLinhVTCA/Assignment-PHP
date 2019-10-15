@@ -15,6 +15,7 @@ include("Check-Input.php");
     <link rel="stylesheet" href="style.css">
     <script src="../JavaScrips.js"></script>
     <title>Register</title>
+    <link rel="icon" sizes="192x192" href="../Image/178f6b924bbee8befb5cf61c9a17a12e.png">
 </head>
 
 <body>
@@ -41,7 +42,7 @@ include("Check-Input.php");
             <span id="errPass">Invalid Password</span><br>
         </div>
         <input type="submit" name="register" value="Register" style="cursor: pointer">
-        <a href="../Index.php">You had account</a>
+        <a href="../Index.php">You had account?</a>
         <span class="error"><?php echo $hihiErr; ?></span><br>
     </form>
 </body>

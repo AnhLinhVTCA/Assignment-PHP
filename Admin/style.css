@@ -4,20 +4,10 @@
     max-width: 100%;
     margin: auto;
 }
-.content{
-  position: relative;
-  left: 39%;
-  float: left;
-}
-#logout{
-  position: relative;
-  left: 25%;
-  cursor: pointer;
-}
+
 .form{
   margin: 20px 20px;
   /* max-width: 500px; */
-
 }
 
 #pd{
@@ -32,23 +22,6 @@
   cursor: pointer;
 }
 
-table{
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table th, table td{
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-
-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: rgb(190, 190, 190);
-  }
-  
 input {
     margin: 10px 0px;
     padding: 10px 20px;
@@ -57,39 +30,4 @@ input {
     border-color: #007bff;
     border: 1px solid transparent;
     border-radius: 5px;
-}
-#Registered{
-  display: block;
-}
-
-.tab {
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-.tab button.active {
-  background-color: #ccc;
-}
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
 }

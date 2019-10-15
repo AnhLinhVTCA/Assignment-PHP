@@ -12,6 +12,7 @@ include('Process-Login.php')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
+    <link rel="icon" sizes="192x192" href="../Image/178f6b924bbee8befb5cf61c9a17a12e.png">
 </head>
 
 <body>
