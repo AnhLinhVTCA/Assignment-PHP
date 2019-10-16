@@ -15,7 +15,8 @@ function checkdelete() {
     return confirm("Do you want delete this account?");
 }
 function Click(evt) {
-    evt.currentTarget.className = "tikicon icon-check-on";
+    var element = document.getElementsByClassName("icon-check-off");
+    element.classList.toggle("icon-check-on");
 }
 function openTabs(evt, tabsname) {
     var i, tabcontent, tabs;

@@ -665,7 +665,33 @@ header a {
     width: 145px;
     display: inline;
 }
+.product__sale-regular {
+    color: #787878;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+.product__sale {
+    color: #242424;
+    display: block;
+    padding-top: 4px;
+    line-height: 1.54;
+}
 
+.product__sale-final {
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+}
+
+.pagination{
+    margin-top: 10px;
+    text-align: right;
+}
+.pagination a{
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+}
 .product__title {
     font-size: 13px;
     color: #777;

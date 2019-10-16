@@ -244,6 +244,28 @@ session_start();
                         <div class='products__wrap'>
                             <?php include("Process.php") ?>
                         </div>
+                        <div class="pagination">
+                            <?php
+                            if ($retval->num_rows < $rec_limit) {
+                                if ($left_rec < $rec_limit) {
+                                    $last = $page - 2;
+                                    echo "<a href=" . $_SERVER['PHP_SELF'] . "?page=" . $last . ">Trước</a>";
+                                }
+                            } else {
+
+                                if ($page > 0) {
+                                    $last = $page - 2;
+                                    echo "<a href=" . $_SERVER['PHP_SELF'] . "?page=" . $last . ">Trước</a>";
+                                    echo "<a href=" . $_SERVER['PHP_SELF'] . "?page=" . $page . ">Tiếp theo</a>";
+                                } else if ($page == 0) {
+                                    echo "<a href=" . $_SERVER['PHP_SELF'] . "?page=" . $page . ">Tiếp theo</a>";
+                                } else if ($left_rec < $rec_limit) {
+                                    $last = $page - 2;
+                                    echo "<a href=" . $_SERVER['PHP_SELF'] . "?page=" . $last . ">Trước</a>";
+                                }
+                            }
+                            ?>
+                        </div>
                     </div>
                     <div class="tabcontent" id="comming-soon"></div>
                     <div class="tabcontent" id="watching"></div>
